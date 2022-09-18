@@ -1,0 +1,15 @@
+@mixin flex($type: flex, $justify-type: center, $align-type: center) {
+  display: $type;
+  justify-content: $justify-type;
+  align-items: $align-type;
+}
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+@mixin absCenteredY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

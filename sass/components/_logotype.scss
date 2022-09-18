@@ -1,0 +1,21 @@
+.logotype {
+  @extend %link;
+  display: block;
+  color: var(--accent-color);
+  font-family: 'Raleway', sans-serif;
+  @include font(var(--bold-font), 26px, 1.19);
+}
+.page-header__logotype {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.page-footer__logotype {
+  margin-bottom: 20px;
+}
+.logotype--black {
+  color: var(--text-black-color);
+}
+.logotype--light {
+  color: var(--text-white-color);
+}

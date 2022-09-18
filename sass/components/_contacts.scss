@@ -1,0 +1,25 @@
+.contacts-list {
+  @extend %list;
+  display: flex;
+  margin-left: auto;
+}
+.contacts-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts-list__link {
+  @extend %link;
+  @include flex();
+  gap: 10px;
+  fill: currentColor;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--primary-text-color);
+  @include font(500, 14px, 1.14);
+  font-style: normal;
+  letter-spacing: 0.02em;
+  transition: color var(--transform-duration) var(--transform-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
