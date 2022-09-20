@@ -1,25 +1,51 @@
 .contacts-list {
   @extend %list;
-  display: flex;
-  margin-left: auto;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    gap: 10px;
+    flex-direction: column-reverse;
+    // margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+    margin-left: auto;
+  }
 }
 .contacts-list__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 }
 .contacts-list__link {
   @extend %link;
-  @include flex();
-  gap: 10px;
-  fill: currentColor;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--primary-text-color);
-  @include font(500, 14px, 1.14);
+  fill: currentColor;
   font-style: normal;
+  @include font(500, 24px, 1.17);
   letter-spacing: 0.02em;
   transition: color var(--transform-duration) var(--transform-timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: $tablet) {
+    @include font(500, 12px, 1.17);
+    gap: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    @include font(500, 14px, 1.14);
+    @include flex();
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.contacts-list__link--mobile {
+  @media screen and (max-width: 767px) {
+    font-size: 34px;
   }
 }

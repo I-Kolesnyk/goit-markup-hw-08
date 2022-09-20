@@ -1,43 +1,69 @@
-.button {
-  @include flex();
-  border: none;
-  border-radius: 4px;
-  color: var(--text-white-color);
-  background-color: var(--accent-color);
-  font-family: inherit;
-  @include font(500, 16px, 1.62);
-  letter-spacing: 0.03em;
-  cursor: pointer;
-}
-.hero__button {
-  @include flex();
-  min-width: 216px;
-  min-height: 50px;
-  @include font(var(--bold-font), 16px, 1.88);
-  letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transform-duration) var(--transform-timing-function);
-  &:hover,
-  &:focus {
-    background-color: var(--hero-button-active);
+.menu__button {
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
-.form-button {
-  @include flex();
-  min-width: 200px;
-  min-height: 50px;
-  @include font(var(--bold-font), 16px, 1.88);
-  letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transform-duration) var(--transform-timing-function);
-  &:hover,
-  &:focus {
-    background-color: var(--hero-button-active);
+.menu__icon-cross {
+  display: none;
+  .menu-button.is-open & {
+    display: block;
   }
 }
-.footer-form__button {
-  fill: var(--white-background-color);
+.menu__icon-menu {
+  display: block;
+  .menu-button.is-open & {
+    display: none;
+  }
 }
-.button__icon {
-  margin-left: 10px;
-}
+
+// .button {
+//   @include flex();
+//   border: none;
+//   border-radius: 4px;
+//   color: var(--text-white-color);
+//   background-color: var(--accent-color);
+//   font-family: inherit;
+//   @include font(500, 16px, 1.62);
+//   letter-spacing: 0.03em;
+//   cursor: pointer;
+// }
+// .hero__button {
+//   @include flex();
+//   min-width: 216px;
+//   min-height: 50px;
+//   @include font(var(--bold-font), 16px, 1.88);
+//   letter-spacing: 0.06em;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   transition: background-color var(--transform-duration) var(--transform-timing-function);
+//   &:hover,
+//   &:focus {
+//     background-color: var(--hero-button-active);
+//   }
+// }
+// .form-button {
+//   @include flex();
+//   min-width: 200px;
+//   min-height: 50px;
+//   @include font(var(--bold-font), 16px, 1.88);
+//   letter-spacing: 0.06em;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   transition: background-color var(--transform-duration) var(--transform-timing-function);
+//   &:hover,
+//   &:focus {
+//     background-color: var(--hero-button-active);
+//   }
+// }
+// .footer-form__button {
+//   fill: var(--white-background-color);
+// }
+// .button__icon {
+//   margin-left: 10px;
+// }

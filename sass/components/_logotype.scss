@@ -3,16 +3,28 @@
   display: block;
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
-  @include font(var(--bold-font), 26px, 1.19);
+  @include font(var(--bold-font), 24px, 1.17);
+  letter-spacing: 0.03em;
+  @media screen and (min-width: $desktop) {
+    @include font(var(--bold-font), 26px, 1.19);
+  }
 }
 .page-header__logotype {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
-.page-footer__logotype {
-  margin-bottom: 20px;
-}
+
+// .page-footer__logotype {
+//   margin-bottom: 20px;
+// }
 .logotype--black {
   color: var(--text-black-color);
 }
