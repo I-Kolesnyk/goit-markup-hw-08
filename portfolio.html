@@ -22,18 +22,17 @@
     <!--Шапка-->
     <header class="page-header">
       <div class="page-header__wrapper container">
+        <!-- <div class="page-header__container--mobile"> -->
+        <a href="./index.html" lang="en" class="logotype page-header__logotype link"
+          >Web<span class="logotype--black">Studio</span></a
+        >
         <nav class="navigation">
-          <a href="./index.html" lang="en" class="logotype page-header__logotype"
-            >Web<span class="logotype--black">Studio</span></a
-          >
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link">Студія</a>
+              <a href="./index.html" class="navigation__link navigation__link--current">Студія</a>
             </li>
             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link navigation__link--current"
-                >Портфоліо</a
-              >
+              <a href="./portfolio.html" class="navigation__link">Портфоліо</a>
             </li>
             <li class="navigation__item">
               <a href="#" class="navigation__link">Контакти</a>
@@ -58,6 +57,74 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu__button menu__button--open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" area-label="Перемикач мобільного меню">
+            <use href="./images/icons.svg#icon-menu" class="menu__icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="menu js-menu-container">
+        <div class="menu__wrapper">
+          <button
+            type="button"
+            class="menu__button menu__button--close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" area-label="Перемикач мобільного меню">
+              <use href="./images/icons.svg#icon-menu-close" class="menu__icon-menu-close"></use>
+            </svg>
+          </button>
+          <ul class="menu-navigation">
+            <li class="menu-navigation__item">
+              <a href="./index.html" class="menu-navigation__link">Студія</a>
+            </li>
+            <li class="menu-navigation__item">
+              <a
+                href="./portfolio.html"
+                class="menu-navigation__link menu-navigation__link--current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="menu-navigation__item">
+              <a href="#" class="menu-navigation__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="menu-contacts-list">
+            <li class="menu-contacts-list__item">
+              <a
+                href="tel:+380961111111"
+                class="menu-contacts-list__link menu-contacts-list__link--big-font"
+              >
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu-contacts-list__item">
+              <a href="mailto:info@devstudio.com" class="menu-contacts-list__link">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-social-list">
+            <li class="menu-social-list__item">
+              <a href="#" class="menu-social-list__link">Instagram</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a href="#" class="menu-social-list__link">Twitter</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a href="#" class="menu-social-list__link">Facebook</a>
+            </li>
+            <li class="menu-social-list__item">
+              <a href="#" class="menu-social-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -360,5 +427,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,23 +1,9 @@
-// .page-header {
-//   position: relative;
-// }
-// .page-header {
-//   border-bottom: 1px solid #ececec;
-// }
-// .page-header__wrapper {
-//   display: flex;
-// }
-.page-header__container--mobile {
-  @media screen and (max-width: 767px) {
-    @include flex($justify-type: space-between);
-  }
-  @media screen and (min-width: $tablet) {
-    // margin-right: 87px;
-  }
+.page-header {
+  position: relative;
+}
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 .page-header__wrapper {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
-  }
+  @include flex($justify-type: space-between);
 }
