@@ -136,3 +136,8 @@
 .modal-form__button-wrapper {
   @include flex();
 }
+.modal-form__text-wrapper {
+  @media screen and (max-width: 479px) {
+    margin-left: 24px;
+  }
+}
