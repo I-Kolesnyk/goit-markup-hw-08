@@ -2,7 +2,7 @@
   @extend %list;
   @include flex();
   @media screen and (max-width: 767px) {
-    width: 100%;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: flex-start;
     column-gap: 8px;
@@ -14,11 +14,10 @@
     gap: 8px;
     margin-bottom: 30px;
   }
-  //   margin-bottom: 50px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
-// .button-list__item:not(:last-child) {
-//   margin-right: 8px;
-// }
 .button-list__button {
   padding: 6px 22px;
   color: var(--title-text-color);

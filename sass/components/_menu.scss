@@ -4,7 +4,8 @@
   visibility: hidden;
   pointer-events: none;
   overflow-y: scroll;
-  transition: opacity var(--transform-duration), visibility var(--transform-timing-function);
+  transition: opacity var(--transform-duration) var(--transform-timing-function),
+    visibility var(--transform-duration) var(--transform-timing-function);
   @media screen and (max-width: 479px) {
     position: fixed;
     top: 0;
