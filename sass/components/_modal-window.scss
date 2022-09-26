@@ -13,8 +13,11 @@
     width: calc(100% - 30px);
     height: auto;
   }
-  @media screen and (min-width: 451px) and (max-width: 1199px) {
+  @media screen and (min-width: 450px) and (max-width: 1199px) {
     width: 450px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   @media screen and (min-width: $desktop) {
     min-width: 528px;
