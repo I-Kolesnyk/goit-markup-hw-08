@@ -813,7 +813,7 @@ body {
     margin-left: 24px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal-form__text-wrapper {
     margin-left: 8px;
   }
